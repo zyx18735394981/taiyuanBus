@@ -1,5 +1,5 @@
 # taiyuanBus
-太原实时公交项目
+11.12 太原实时公交项目
 
          自己最近想做一个关于太原实时公交的项目，由于公交公司的数据接口，不是我能获取到的，但还是想做做这个项目，
          
@@ -7,13 +7,13 @@
          
          太原实时公交，主要是通过客户端能够对自己想要知道的公交进行实时定位，离自己所在位置的距离，多长时间能够到达。我主要是想通过定位实现这个功能。
          
- 在UI框架上想自己从头到尾，每个细节自己搭建，加入比较炫的特效，app里面的图标都采用扁平化设计，对美工又有一定的要求。
+         在UI框架上想自己从头到尾，每个细节自己搭建，加入比较炫的特效，app里面的图标都采用扁平化设计，对美工又有一定的要求。
  
           今天晚上，主要是看了看高德地图的开发文档，拿到了sha1值  key值 把地图显示在界面上。
           
  // MainActivity代码如下
          
-                      package com.zyx.taiyuanbus;
+            package com.zyx.taiyuanbus;
 
             import com.amap.api.maps.MapView;
 
@@ -57,8 +57,9 @@
                 }
 
               }
-// BaseMapFragmentActivity  代码如下:         
-                               package com.zyx.basic;
+// BaseMapFragmentActivity  代码如下:   
+
+                  package com.zyx.basic;
 
                   import android.os.Bundle;
                   import android.support.v4.app.FragmentActivity;
@@ -98,7 +99,7 @@
                       }
 
     
-在布局文件中声明
+在布局文件中声明:
 
               <com.amap.api.maps.MapView
 
@@ -108,7 +109,8 @@
 
               android:layout_height="match_parent"/>
 
-BaseMapFragmentActivity布局文件
+BaseMapFragmentActivity布局文件:
+
               <fragment 
               android:id="@+id/map" 
               android:layout_width="match_parent" 
@@ -117,12 +119,12 @@ BaseMapFragmentActivity布局文件
 
           </fragment>
 
-////////////////////////////////////////////////////////////
+
       其实以上没有自己的逻辑性代码，也就是初步了解了解高德地图，都是通过开发文档写的，很方便。
 
 
 
-
+        PS:本来打算今天对Git工具在GitHub上对自己的代码进行托管的，但是忙了一天也没有深入了解，张祎欣，要好好努力~
 
 
 
