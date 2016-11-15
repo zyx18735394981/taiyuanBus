@@ -9,124 +9,20 @@
          
          在UI框架上想自己从头到尾，每个细节自己搭建，加入比较炫的特效，app里面的图标都采用扁平化设计，对美工又有一定的要求。
  
-          今天晚上，主要是看了看高德地图的开发文档，拿到了sha1值  key值 把地图显示在界面上。
-          
- // MainActivity代码如下
-         
-            package com.zyx.taiyuanbus;
+          今天晚上，主要是看了看高德地图的开发文档，拿到了sha1值  key值 初步把地图显示在界面上
+   
+         其实以上没有自己的逻辑性代码，也就是初步了解了解高德地图，都是通过开发文档写的，很方便。 
 
-            import com.amap.api.maps.MapView;
+11.15  taiyuanBus
 
-            import android.os.Bundle;
-            import android.app.Activity;
-            import android.view.Menu;
-            public class MainActivity extends Activity {
-                MapView mMapView = null;
-                @Override
-                protected void onCreate(Bundle savedInstanceState) {
-                  super.onCreate(savedInstanceState);
-                  setContentView(R.layout.activity_main);
-                  //获取地图控件引用
-                  mMapView = (MapView) findViewById(R.id.map);
-                  //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，实现地图生命周期管理
-                  mMapView.onCreate(savedInstanceState);
-                }
-                @Override
-                protected void onDestroy() {
-                  super.onDestroy();
-                  //在activity执行onDestroy时执行mMapView.onDestroy()，实现地图生命周期管理
-                  mMapView.onDestroy();
-                }
-               @Override
-               protected void onResume() {
-                  super.onResume();
-                  //在activity执行onResume时执行mMapView.onResume ()，实现地图生命周期管理
-                  mMapView.onResume();
-                  }
-               @Override
-               protected void onPause() {
-                  super.onPause();
-                  //在activity执行onPause时执行mMapView.onPause ()，实现地图生命周期管理
-                  mMapView.onPause();
-                  }
-               @Override
-               protected void onSaveInstanceState(Bundle outState) {
-                  super.onSaveInstanceState(outState);
-                  //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，实现地图生命周期管理
-                  mMapView.onSaveInstanceState(outState);
-                }
+		今天把自己Github上的taiyuanBus好好想了一下，基本结构想了想，自己想做全面一点，分为web端跟客户端，自己先做web端，然后再暴露接口给客户端。
 
-              }
-// BaseMapFragmentActivity  代码如下:   
-
-                  package com.zyx.basic;
-
-                  import android.os.Bundle;
-                  import android.support.v4.app.FragmentActivity;
-
-                  import com.amap.api.maps.AMap;
-                  import com.amap.api.maps.SupportMapFragment;
-                  import com.zyx.taiyuanbus.R;
-                  import com.zyx.taiyuanbus.R.id;
-                  import com.zyx.taiyuanbus.R.layout;
-                  public class BaseMapFragmentActivity extends FragmentActivity {
-                      private AMap mMap;
-
-                      protected void onCreate(Bundle savedInstanceState) {
-                          super.onCreate(savedInstanceState);
-                          setContentView(R.layout.basemap_fragment_activity);
-                          setUpMapIfNeeded();
-
-
-                      }
-                      @Override
-                    protected void onResume() {
-                      super.onResume();
-                      setUpMapIfNeeded();
-                    }
-
-                    @Override
-                    protected void onDestroy(){
-                      super.onDestroy();
-                    }
-
-                    private void setUpMapIfNeeded() {
-                      if (mMap == null) {
-                        mMap = ((SupportMapFragment) getSupportFragmentManager()
-                            .findFragmentById(R.id.map)).getMap();
-                      }
-                    }
-                      }
-
-    
-在布局文件中声明:
-
-              <com.amap.api.maps.MapView
-
-              android:id="@+id/map"
-
-              android:layout_width="match_parent"
-
-              android:layout_height="match_parent"/>
-
-BaseMapFragmentActivity布局文件:
-
-              <fragment 
-              android:id="@+id/map" 
-              android:layout_width="match_parent" 
-              android:layout_height="match_parent" 
-              class="com.amap.api.maps.SupportMapFragment">
-
-          </fragment>
-
-
-      其实以上没有自己的逻辑性代码，也就是初步了解了解高德地图，都是通过开发文档写的，很方便。
-
-
-
-        PS:本来打算今天对Git工具在GitHub上对自己的代码进行托管的，但是忙了一天也没有深入了解，张祎欣，要好好努力~
-
-
+        服务器端的taiyuanBus：
+               界面自己设计，就使用bootstrap框架。顺便对控件熟悉熟悉，
+               数据库用本地的mysql
+               DB--Dao--service--servlet--jsp
+         今天工作内容：
+			找素材，切图，用jsp初步构建pc端框架
 
 
 
