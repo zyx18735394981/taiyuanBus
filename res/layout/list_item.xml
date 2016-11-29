@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list_icon1"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="阔老爷"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+       
+         />
+
+    <RadioButton
+        android:id="@+id/rb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" 
+         android:layout_marginLeft="50dp"
+        />
+
+</LinearLayout>
